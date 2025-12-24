@@ -1,4 +1,4 @@
--- coded by tyz -- MODIFICADO POR ZED PARA REENTRADA AUTOMÁTICA COM FALLBACK
+-- coded by tyz
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -12,7 +12,7 @@ local char = plr.Character or plr.CharacterAdded:Wait()
 if type(queue_on_teleport) == "function" then
     print("DEBUG: queue_on_teleport disponível. Configurando auto-reinjeção.")
     -- String de comando simples e direta
-    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/Tyzzzzz/mushyo/main/mushok"))()')
+    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/hyper165hz-oss/musyo.lua/refs/heads/main/meu%20mush.lua"))()')
 else
     warn("DEBUG AVISO CRÍTICO: queue_on_teleport NÃO está disponível.")
     warn("O script NÃO reiniciará automaticamente após teleporte.")
@@ -279,5 +279,6 @@ if not success then
     
     -- Tenta reiniciar o script
     print("DEBUG: Tentando reiniciar o script após erro...")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tyzzzzz/mushyo/main/mushok"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hyper165hz-oss/musyo.lua/refs/heads/main/meu%20mush.lua"))()
 end
+
